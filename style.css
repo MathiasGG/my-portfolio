@@ -1,0 +1,636 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: white;
+    background-color: #333131;
+}
+
+/* pagina de início */
+.inicio {
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+}
+
+.rolar-pagina nav {
+    display: flex;
+    gap: 30px;
+}
+
+.topico-rolarpage {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.topico-rolarpage:hover {
+    color: #38973B;
+}
+
+.cabeça {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+ header {
+    position: sticky;
+    top: 0;
+    background-color: #333131;
+    z-index: 1000;
+    border-bottom: 1px solid #444;
+}
+
+.logo-codigo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #38973B;
+    font-family: 'IBM Plex Mono', monospace;
+}
+
+.foto-perfil {
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.conteudo-inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 20px;
+    min-height: 90vh;
+}
+
+.lado-esquerdo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #2b2b2b;
+    padding: 40px;
+    border-radius: 30px;
+    border: 2px solid #38973B;
+}
+
+.icons-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* Alinha os textos pela esquerda */
+    gap: 10px;
+}
+
+.apresentação {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0px;
+}
+
+.dev {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 24px;
+    color: #38973B;
+}
+
+.logo-h1-começo {
+    margin-top: 20px;
+    align-items: flex-start;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: #38973B;
+}
+
+.logo-h1-fim {
+    margin-bottom: 20px;
+    align-items: flex-start;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: #38973B;
+}
+
+.nome {
+    color: #38973B;
+}
+
+.dev {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 80px;
+    color: #38973B;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.titulo-principal,
+.dev1 {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 45px;
+    color: white;
+    margin: 5px 0;
+    line-height: 1.1;
+}
+
+.logo-tags {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    color: #a7e7aa;
+}
+
+
+
+.texto-descricao {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d1d5db;
+    max-width: 500px;
+    /* Impede que o texto estique muito para a direita */
+    line-height: 1.6;
+    font-size: 14px;
+    margin: 10px 0 10px 20px;
+    /* Empurra o texto para a direita */
+}
+
+.conversar {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: #38973B;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* pagina de sobre mim */
+
+#sobre-mim {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/fundosobremim.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Empurra o conteúdo para o meio exato da caixa */
+    min-height: 100vh;
+    /* Força a seção a ter a altura exata da tela do monitor */
+}
+
+.sobre-mim-titulo {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.cartao-sobre {
+    background-color: #2b2b2b;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.oi-verde {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #38973B;
+    font-size: 36px;
+    margin: 15px 0;
+}
+
+.texto-descricao-sobre {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d1d5db;
+    line-height: 1.6;
+    font-size: 15px;
+    margin-left: 20px;
+    /* empurrando o texto pra direita, nn apagar */
+    margin-bottom: 15px;
+}
+
+.destaque {
+    color: #38973B;
+}
+
+.foto-programando {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+}
+
+/* pagina de habilidades */
+
+#habilidades {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/coding.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.logo-barra {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 50px;
+    color: #38973B;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.skills {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 45px;
+    color: #38973B;
+    margin: 10px 0;
+}
+
+.texto-descricao-skills {
+    color: #d1d5db;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.cards-habilidades {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-dev {
+    background-color: #92f0e0;
+    border-left: 8px solid #1b73cb;
+    padding: 20px 40px;
+    border-radius: 8px;
+    text-align: center;
+    width: 250px;
+}
+
+.titulo-card {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #111;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.texto-card {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #444;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.icones-tecnologias {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-family: 'ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+
+.tech-item img {
+    width: 80px;
+    height: auto;
+}
+
+.html-text {
+    color: #e44d26;
+}
+
+.css-text {
+    color: #2965f1;
+}
+
+.js-text {
+    color: #f0db4f;
+}
+
+.react-text {
+    color: #61dafb;
+}
+
+/* pagina de projetos */
+
+#projetos {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/coding1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.projetos-titulo {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 40px;
+    color: #38973B;
+    margin-bottom: 40px;
+    margin-bottom: 0px;
+}
+
+.projetos-desc {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d1d5db;
+    font-size: 14px;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* pagina de contatos */
+
+#contatos {
+    background-color: #333131;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 93vh;
+
+}
+
+.contatos-titulo {
+    font-family: 'ubuntu', sans-serif;
+    font-size: 60px;
+    color: #38973B;
+    margin-bottom: 60px;
+}
+
+.contatos-desc {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d1d5db;
+    font-size: 18px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.icones-contatos img {
+    width: 80px;
+    height: auto; 
+    transition: transform 0.3s; 
+    text-decoration: none;
+}
+
+.icones-contatos img:hover {
+    transform: scale(1.1);
+}
+
+.icones-contatos a {
+    text-decoration: none;
+}
+
+
+ .fim {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+}
+ footer {
+    position: sticky;
+    top: 0;
+    background-color: #33313100;
+    z-index: 1000;
+    border-bottom: 1px solid #44444400;
+}
+/* Carrossel de projetos */
+
+.meu-carrossel {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.slide {
+    display: none;
+}
+
+.slide.ativa {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.texto-baixo {
+    margin-top: 15px;
+}
+
+.texto-baixo a {
+    color: #e02e2e;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.texto-baixo a:hover {
+    text-decoration: underline;
+}
+
+.seta {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 16px;
+    font-size: 24px;
+    border-radius: 50%;
+}
+
+.seta-esq {
+    left: -50px;
+}
+
+.seta-dir {
+    right: -50px;
+}
+
+/* Media Query para dispositivos móveis (celulares e tablets) */
+@media screen and (max-width: 768px) {
+    
+    /* Header e Navegação */
+    .cabeça {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 10px;
+    }
+
+    .rolar-pagina nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .topico-rolarpage {
+        font-size: 14px;
+    }
+
+    /* Seção Início */
+    .conteudo-inicio {
+        flex-direction: column; 
+        gap: 40px;
+        padding-top: 100px;
+    }
+
+    .lado-esquerdo {
+        width: 100%;
+        max-width: 320px;
+        padding: 20px;
+    }
+
+    .apresentação {
+        align-items: center;
+        text-align: center;
+    }
+
+    .dev {
+        font-size: 50px;
+    }
+
+    .titulo-principal, .dev1 {
+        font-size: 30px;
+    }
+
+    .texto-descricao {
+        margin-left: 0; 
+        font-size: 16px;
+    }
+
+    /* Seção Sobre Mim */
+    .conteudo-sobre {
+        flex-direction: column-reverse;
+    }
+
+    .cartao-sobre {
+        padding: 20px;
+    }
+
+    .texto-descricao-sobre {
+        margin-left: 0;
+        font-size: 14px;
+    }
+
+    .foto-programando {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* Seção Habilidades (Skills) */
+    .cards-habilidades {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-dev {
+        width: 90%;
+    }
+
+    .icones-tecnologias {
+        gap: 30px;
+    }
+
+    .tech-item img {
+        width: 60px;
+    }
+
+    #contatos {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
+    padding: 40px 20px;
+}
+
+.icones-contatos {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; 
+    width: 100%;
+}
+
+.icones-contatos img {
+    width: 60px; 
+}
+
+    /* Carrossel de Projetos */
+    .meu-carrossel {
+        width: 90%;
+    }
+
+    .seta {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .seta-esq {
+        left: 5px;
+    }
+
+    .seta-dir {
+        right: 5px;
+    }
+
+    .fim {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
