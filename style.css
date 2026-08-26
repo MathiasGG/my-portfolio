@@ -766,3 +766,83 @@ footer {
         gap: 10px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        transition: padding 0.3s ease;
+    }
+
+    .cabeça {
+        position: relative;
+        min-height: 52px;
+        flex-direction: row;
+        justify-content: center;
+        padding: 12px 16px;
+        transition: min-height 0.3s ease, padding 0.3s ease;
+    }
+
+    .logo-codigo {
+        display: none;
+    }
+
+    .inicio {
+        font-size: 20px;
+        text-align: center;
+        transition: font-size 0.3s ease;
+    }
+
+    .rolar-pagina {
+        position: absolute;
+        right: 16px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-toggle {
+        display: block;
+        padding: 7px 11px;
+        border: 1px solid #38973B;
+        border-radius: 6px;
+        color: #ffffff;
+        background-color: transparent;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        cursor: pointer;
+    }
+
+    .rolar-pagina nav {
+        display: none;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        min-width: 150px;
+        padding: 12px;
+        flex-direction: column;
+        gap: 12px;
+        background-color: #333131;
+        border: 1px solid #444;
+        border-radius: 6px;
+    }
+
+    .rolar-pagina nav.menu-aberto {
+        display: flex;
+    }
+
+    header.header-reduzido .cabeça {
+        min-height: 38px;
+        padding: 6px 16px;
+    }
+
+    header.header-reduzido .inicio {
+        font-size: 16px;
+    }
+
+    header.header-reduzido .menu-toggle {
+        padding: 5px 9px;
+        font-size: 11px;
+    }
+
+    header.header-reduzido .rolar-pagina nav {
+        top: 32px;
+    }
+}

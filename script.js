@@ -2,6 +2,7 @@ let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('#menu-principal');
+const header = document.querySelector('header');
 
 function mudarSlide(movimento) {
     slides[slideIndex].classList.remove('ativa');
@@ -25,4 +26,8 @@ menu.addEventListener('click', (evento) => {
         menu.classList.remove('menu-aberto');
         menuToggle.setAttribute('aria-expanded', 'false');
     }
+});
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('header-reduzido', window.scrollY > 60);
 });
