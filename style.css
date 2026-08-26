@@ -24,6 +24,10 @@ body {
     gap: 30px;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .topico-rolarpage {
     text-decoration: none;
     color: #ffffff;
@@ -70,7 +74,7 @@ header {
     align-items: center;
     gap: 100px;
     padding: 50px 20px;
-    min-height: 90vh;
+    min-height: calc(100vh - 70px);
 }
 
 .lado-esquerdo {
@@ -97,12 +101,6 @@ header {
     flex-direction: column;
     align-items: flex-start;
     gap: 0px;
-}
-
-.dev {
-    font-family: 'ubuntu', sans-serif;
-    font-size: 24px;
-    color: #38973B;
 }
 
 .logo-h1-começo {
@@ -167,12 +165,32 @@ header {
     color: #38973B;
     margin-top: 20px;
     cursor: pointer;
+    text-decoration: none;
+}
+
+.botao-curriculo {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 16px;
+    border: 1px solid #38973B;
+    border-radius: 6px;
+    color: #ffffff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.botao-curriculo:hover,
+.botao-curriculo:focus-visible {
+    background-color: #38973B;
+    color: #1f1d1d;
 }
 
 /* pagina de sobre mim */
 
 #sobre-mim {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/fundosobremim.jpeg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('details/fundosobremim.jpeg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -243,7 +261,7 @@ header {
 /* pagina de habilidades */
 
 #habilidades {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/coding.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('details/coding.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -280,21 +298,26 @@ header {
 }
 
 .cards-habilidades {
+    width: 100%;
+    max-width: 1100px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
     gap: 30px;
     margin-bottom: 60px;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .card-dev {
+    flex: 1 1 280px;
+    max-width: 320px;
+    min-height: 180px;
     background-color: #92f0e0;
     border-left: 8px solid #1b73cb;
-    padding: 20px 40px;
+    padding: 20px 25px;
     border-radius: 8px;
     text-align: center;
-    width: 250px;
 }
 
 .titulo-card {
@@ -312,10 +335,12 @@ header {
 }
 
 .icones-tecnologias {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 50px;
     justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
@@ -347,14 +372,22 @@ header {
     color: #f0db4f;
 }
 
-.react-text {
-    color: #61dafb;
+.excel-text {
+    color: #54c20a;
+}
+
+.git-text {
+    color: #f14e32;
+}
+
+.windows-text {
+    color: #0078d6;
 }
 
 /* pagina de projetos */
 
 #projetos {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/details/coding1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('details/coding1.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -371,8 +404,7 @@ header {
     font-family: 'ubuntu', sans-serif;
     font-size: 40px;
     color: #38973B;
-    margin-bottom: 40px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .projetos-desc {
@@ -384,24 +416,70 @@ header {
     margin-top: 5px;
 }
 
-/* pagina de contatos */
+.descricao-projeto {
+    max-width: 650px;
+    margin: 10px auto 0;
+    color: #d1d5db;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+}
 
-#contatos {
-    background-color: #333131;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+/* pagina de objetivo */
+
+#objetivo {
+    min-height: 100svh;
     padding: 80px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 93vh;
+    background-color: #292727;
+}
 
+.objetivo-titulo {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 45px;
+    color: #38973B;
+    margin: 15px 0 35px;
+}
+
+.objetivo-conteudo {
+    width: 100%;
+    max-width: 850px;
+    padding: 40px;
+    background-color: #2b2b2b;
+    border-left: 5px solid #38973B;
+    border-radius: 8px;
+}
+
+.objetivo-conteudo p {
+    font-family: 'IBM Plex Mono', monospace;
+    color: #d1d5db;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.objetivo-conteudo p:last-child {
+    margin-bottom: 0;
+}
+
+/* pagina de contatos */
+
+#contatos {
+    min-height: 100svh;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #333131;
 }
 
 .contatos-titulo {
-    font-family: 'ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 60px;
     color: #38973B;
     margin-bottom: 60px;
@@ -412,45 +490,45 @@ header {
     color: #d1d5db;
     font-size: 18px;
     margin-bottom: 50px;
-    text-align: center;
 }
 
-.icones-contatos img {
-    width: 80px;
-    height: auto;
-    transition: transform 0.3s;
-    text-decoration: none;
-}
-
-.icones-contatos img:hover {
-    transform: scale(1.1);
+.icones-contatos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .icones-contatos a {
     text-decoration: none;
 }
 
+.icones-contatos img {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.icones-contatos img:hover {
+    transform: scale(1.1);
+}
 
 .fim {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-
 }
 
 footer {
-    position: sticky;
-    top: 0;
-    background-color: #33313100;
-    z-index: 1000;
-    border-bottom: 1px solid #44444400;
+    background-color: #333131;
+    border-top: 1px solid #444;
 }
 
 /* Carrossel de projetos */
 
 .meu-carrossel {
     position: relative;
+    width: 100%;
     max-width: 800px;
     margin: auto;
     text-align: center;
@@ -505,10 +583,14 @@ footer {
     right: -50px;
 }
 
-/* Media Query para dispositivos móveis (celulares e tablets) */
-@media screen and (max-width: 768px) {
+#inicio,
+#sobre-mim,
+#habilidades,
+#projetos {
+    min-height: 100svh;
+}
 
-    /* Header e Navegação */
+@media screen and (max-width: 768px) {
     .cabeça {
         flex-direction: column;
         gap: 15px;
@@ -516,20 +598,51 @@ footer {
     }
 
     .rolar-pagina nav {
-        gap: 15px;
+        gap: 10px;
+        row-gap: 8px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .topico-rolarpage {
-        font-size: 14px;
+        font-size: 13px;
     }
 
-    /* Seção Início */
+    .menu-toggle {
+        display: block;
+        margin: 0 auto;
+        padding: 8px 14px;
+        border: 1px solid #38973B;
+        border-radius: 6px;
+        color: #ffffff;
+        background-color: transparent;
+        font-family: 'IBM Plex Mono', monospace;
+        cursor: pointer;
+    }
+
+    .rolar-pagina nav {
+        display: none;
+    }
+
+    .rolar-pagina nav.menu-aberto {
+        display: flex;
+    }
+
+    #inicio,
+    #sobre-mim,
+    #objetivo,
+    #habilidades,
+    #projetos,
+    #contatos {
+        min-height: 100svh;
+        padding: 60px 20px;
+    }
+
     .conteudo-inicio {
+        min-height: calc(100svh - 150px);
         flex-direction: column;
         gap: 40px;
-        padding-top: 100px;
+        padding: 40px 10px;
     }
 
     .lado-esquerdo {
@@ -557,12 +670,12 @@ footer {
         font-size: 16px;
     }
 
-    /* Seção Sobre Mim */
     .conteudo-sobre {
         flex-direction: column-reverse;
     }
 
     .cartao-sobre {
+        width: 100%;
         padding: 20px;
     }
 
@@ -576,47 +689,62 @@ footer {
         max-width: 280px;
     }
 
-    /* Seção Habilidades (Skills) */
     .cards-habilidades {
         flex-direction: column;
         align-items: center;
+        gap: 20px;
     }
 
     .card-dev {
-        width: 90%;
+        width: 100%;
+        max-width: 340px;
     }
 
     .icones-tecnologias {
-        gap: 30px;
-    }
-
-    .tech-item img {
-        width: 60px;
-    }
-
-    #contatos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .icones-contatos {
-        display: flex;
-        justify-content: center;
         gap: 20px;
-        width: 100%;
+    }
+
+    .tech-item {
+        min-width: 70px;
+    }
+
+    .objetivo-titulo,
+    .sobre-mim-titulo,
+    .projetos-titulo {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    .objetivo-conteudo {
+        padding: 25px 20px;
+    }
+
+    .objetivo-conteudo p,
+    .descricao-projeto {
+        font-size: 12px;
+    }
+
+    .contatos-titulo {
+        font-size: 40px;
+        margin-bottom: 30px;
+    }
+
+    .contatos-desc {
+        font-size: 15px;
+        margin-bottom: 30px;
     }
 
     .icones-contatos img {
         width: 60px;
     }
 
-    /* Carrossel de Projetos */
     .meu-carrossel {
-        width: 90%;
+        width: 100%;
+    }
+
+    .slide img {
+        max-width: 100%;
+        height: auto;
     }
 
     .seta {
@@ -625,11 +753,11 @@ footer {
     }
 
     .seta-esq {
-        left: 5px;
+        left: 0;
     }
 
     .seta-dir {
-        right: 5px;
+        right: 0;
     }
 
     .fim {

@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <title>Meu portfolio</title>
+    <title>Mathias Corrêa | Estudante de ADS | TI & Suporte</title>
 </head>
 
 <body>
@@ -16,12 +19,16 @@
         <section class="cabeça">
 
             <span class="logo-codigo">&lt;C/&gt;</span>
-            <h1 class="inicio">MathiasCorrêa</h1>
+            <h1 class="inicio">Mathias Corrêa</h1>
 
             <div class="rolar-pagina">
-                <nav>
+                <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+                    Menu
+                </button>
+                <nav id="menu-principal">
                     <a class="topico-rolarpage" href="#inicio">Inicio</a>
                     <a class="topico-rolarpage" href="#sobre-mim">Sobre mim</a>
+                    <a class="topico-rolarpage" href="#objetivo">Objetivo</a>
                     <a class="topico-rolarpage" href="#habilidades">Habilidades</a>
                     <a class="topico-rolarpage" href="#projetos">Projetos</a>
                     <a class="topico-rolarpage" href="#contatos">Contato</a>
@@ -35,13 +42,13 @@
             <div class="conteudo-inicio">
                 <!-- PARTE DA ESQUERDA -->
                 <div class="lado-esquerdo">
-                    <img class="foto-perfil" src="/details/fotodeperfil.png" alt="foto de perfil">
+                    <img class="foto-perfil" src="details/fotodeperfil.png" alt="Foto de Mathias Corrêa">
                     <h2>Mathias</h2>
-                    <p>Desenvolvedor Front-End</p>
+                    <p>Estudante de ADS | TI & Suporte</p>
                     <div class="icons-infos">
-                        <img class="email" src="/details/email.png" alt="email"> mathiascorrea2006@gmail.com
-                        <img class="localização" src="/details/localização.png" alt="localização"> Brasil
-                        <img class="emprego" src="/details/emprego.png" alt="emprego"> Full-time / Freelancer
+                        <img class="email" src="details/email.png" alt="Ícone de e-mail"> mathiascorrea2006@gmail.com
+                        <img class="localização" src="details/localização.png" alt="Ícone de localização"> Brasil
+                        <img class="emprego" src="details/emprego.png" alt="Ícone de emprego"> Full-time / CLT
                     </div>
                 </div>
 
@@ -52,17 +59,22 @@
 
                     <span class="logo-tags">&lt;h1&gt;</span>
 
-                    <h1 class="titulo-principal">Eai<br>eu sou o <span class="nome">Mathias</span>,</h1>
-                    <h1 class="dev1">Desenvolvedor Front-End <span class="logo-tags">&lt;/h1&gt;</span></h1>
+                    <h1 class="titulo-principal">E aí<br>eu sou o <span class="nome">Mathias</span>,</h1>
+                    <h1 class="dev1">Estudante de Análise e Desenvolvimento de Sistemas<span
+                            class="logo-tags">&lt;/h1&gt;</span></h1>
 
                     <span class="logo-tags">&lt;p&gt;</span>
 
-                    <p class="texto-descricao">Ajudo empresas a crescerem criando experiências web incríveis. Se você
-                        procura um desenvolvedor que gosta de entregar resultados.</p>
+                    <p class="texto-descricao">Busco minha primeira oportunidade na área para aplicar meus
+                        conhecimentos,
+                        aprender na prática e evoluir profissionalmente.</p>
 
                     <span class="logo-tags">&lt;/p&gt;</span>
 
-                    <h2 class="conversar">Vamos Conversar</h2>
+                    <a class="conversar" href="#contatos">Vamos Conversar</a>
+                    <a class="botao-curriculo" href="details/curriculo.pdf" target="_blank" rel="noopener noreferrer">
+                        Ver currículo
+                    </a>
                 </div>
 
                 <!-- PARTE DA DIREITA -->
@@ -82,60 +94,100 @@
                     <h2 class="oi-verde">Oi!</h2>
 
                     <p class="texto-descricao-sobre">
-                        Eu não apenas estudo tecnologia — eu construo com ela. Sou estudante de Análise e
-                        Desenvolvimento de Sistemas e desenvolvedor em formação, focado em transformar ideias em
-                        experiências digitais modernas e funcionais. Trabalho com <span class="destaque">HTML, CSS e
-                            JavaScript</span>, criando interfaces que não só funcionam bem, mas também chamam atenção.
+                        Sou estudante de Análise e Desenvolvimento de Sistemas e estou em busca da minha primeira
+                        oportunidade profissional na área de Tecnologia da Informação.
+
+                        Tenho interesse em Suporte Técnico, Infraestrutura e na resolução de problemas, áreas nas quais
+                        busco desenvolver cada vez mais meus conhecimentos. Também possuo conhecimentos em
+                        desenvolvimento web, que utilizo em projetos pessoais para praticar e aprender.
                         <br><br>
-                        Gosto de sair do básico. Estou sempre buscando evoluir, aprender novas ferramentas e elevar o
-                        nível dos meus projetos, seja em design, performance ou experiência do usuário. Vejo cada
-                        projeto como uma oportunidade de crescer e provar meu valor na prática. Meu objetivo é me tornar
-                        um desenvolvedor front-end cada vez mais completo e participar de projetos que realmente façam
-                        diferença.
+                        Sou uma pessoa dedicada, curiosa e com facilidade para aprender. Meu objetivo é conquistar minha
+                        primeira experiência em TI, contribuir com a equipe, aprender com profissionais da área e
+                        crescer junto com a empresa.
                     </p>
 
                     <span class="logo-tags">&lt;/p&gt;</span>
                 </div>
 
-                <img class="foto-programando" src="/details/programando.jpg" alt="Foto Programando">
+                <img class="foto-programando" src="details/programando.jpg" alt="Mathias programando em um computador">
 
             </div>
+        </section>
+
+        <section id="objetivo">
+            <span class="logo-tags">&lt;section&gt;</span>
+            <h1 class="objetivo-titulo">Objetivo Profissional</h1>
+
+            <div class="objetivo-conteudo">
+                <p>
+                    Busco minha primeira oportunidade profissional na área de
+                    <span class="destaque">Tecnologia da Informação</span>, com interesse em
+                    Suporte Técnico, Help Desk, Infraestrutura e áreas relacionadas.
+                </p>
+
+                <p>
+                    Quero colocar em prática os conhecimentos que venho desenvolvendo
+                    durante minha formação e em projetos pessoais, enquanto adquiro
+                    experiência profissional, aprendo com a equipe e continuo evoluindo
+                    na área de tecnologia.
+                </p>
+            </div>
+
+            <span class="logo-tags">&lt;/section&gt;</span>
         </section>
 
         <section id="habilidades">
             <span class="logo-barra">&lt;/&gt;</span>
             <h1 class="skills">Skills</h1>
             <div class="linha-verde"></div>
-            <p class="texto-descricao-skills">Estou empenhado em nunca parar de aprender e melhorar.</p>
+            <p class="texto-descricao-skills">Conhecimentos desenvolvidos durante minha formação e em projetos práticos.
+            </p>
 
             <div class="cards-habilidades">
                 <div class="card-dev">
-                    <h2 class="titulo-card">Desenvolvimento Web</h2>
-                    <p class="texto-card">HTML • CSS • JS • REACT</p>
+                    <h2 class="titulo-card">SUPORTE & TI</h2>
+                    <p class="texto-card">
+                        Suporte técnico • Manutenção de computadores • Hardware • Windows •
+                        Instalação e configuração de softwares • Diagnóstico e resolução de
+                        problemas • Periféricos • Redes — básico
+                    </p>
                 </div>
 
                 <div class="card-dev">
-                    <h2 class="titulo-card">Desenvolvimento de Apps</h2>
-                    <p class="texto-card">IOS • ANDROID</p>
+                    <h2 class="titulo-card">Ferramentas & Sistemas</h2>
+                    <p class="texto-card">Git • GitHub • Pacote Office • ITIL • Vercel</p>
+                </div>
+
+                <div class="card-dev">
+                    <h2 class="titulo-card">Linguagens de Programação</h2>
+                    <p class="texto-card">HTML • CSS • JavaScript • Lógica de programação</p>
                 </div>
             </div>
 
             <div class="icones-tecnologias">
+                <div class="tech-item windows-text">
+                    <img class="html" src="details/windows.png" alt="Logotipo do Windows">
+                    <span>WINDOWS</span>
+                </div>
+                <div class="tech-item git-text">
+                    <img class="html" src="details/git.png" alt="Logotipo do Git">
+                    <span>GIT</span>
+                </div>
                 <div class="tech-item html-text">
-                    <img class="html" src="/details/html.png" alt="HTML">
+                    <img class="html" src="details/html.png" alt="Logotipo do HTML">
                     <span>HTML</span>
                 </div>
                 <div class="tech-item css-text">
-                    <img class="css" src="/details/css.png" alt="CSS">
+                    <img class="css" src="details/css.png" alt="Logotipo do CSS">
                     <span>CSS</span>
                 </div>
                 <div class="tech-item js-text">
-                    <img class="js" src="/details/js.png" alt="JavaScript">
+                    <img class="js" src="details/js.png" alt="Logotipo do JavaScript">
                     <span>JS</span>
                 </div>
-                <div class="tech-item react-text">
-                    <img class="react" src="/details/react.png" alt="React">
-                    <span>REACT</span>
+                <div class="tech-item excel-text">
+                    <img class="react" src="details/excel.png" alt="Logotipo do Microsoft Excel">
+                    <span>EXCEL</span>
                 </div>
             </div>
         </section>
@@ -148,26 +200,39 @@
                 <button class="seta seta-esq" onclick="mudarSlide(-1)">&#10094;</button>
 
                 <div class="slide ativa">
-                    <img src="/details/projeto1.png" alt="Projeto da Netflix">
+                    <img src="details/projeto1.png" alt="Prévia do clone da Netflix">
                     <div class="texto-baixo">
-                        <a href="https://netflix-cloned-by-mathias.vercel.app" target="_blank">Clone da
-                            Netflix</a>
+                        <a href="https://netflix-cloned-by-mathias.vercel.app" target="_blank" rel="noopener noreferrer">
+                            Clone da Netflix
+                        </a>
+                        <p class="descricao-projeto">
+                            Interface inspirada na Netflix, desenvolvida para praticar layout,
+                            responsividade e organização de conteúdos.
+                        </p>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <img src="/details/projeto2.png" alt="Projeto da loja de café">
+                    <img src="details/projeto2.png" alt="Prévia do site de uma loja de café">
                     <div class="texto-baixo">
-                        <a href="https://cafeteria-landingpage-by-mathias.vercel.app" target="_blank">Loja de
+                        <a href="https://cafeteria-landingpage-by-mathias.vercel.app" target="_blank" rel="noopener noreferrer">Loja de
                             café</a>
+                        <p class="descricao-projeto">
+                            Landing page de uma cafeteria, com foco em apresentação visual,
+                            responsividade e experiência do usuário.
+                        </p>
                     </div>
                 </div>
 
                 <div class="slide">
-                    <img src="/details/projeto3.png" alt="lista de fazeres">
+                    <img src="details/projeto3.png" alt="Prévia de uma lista de tarefas">
                     <div class="texto-baixo">
-                        <a href="https://to-do-list-by-mathias.vercel.app" target="_blank">Lista de
+                        <a href="https://to-do-list-by-mathias.vercel.app" target="_blank" rel="noopener noreferrer">Lista de
                             Fazeres</a>
+                        <p class="descricao-projeto">
+                            Aplicação de lista de tarefas desenvolvida para praticar JavaScript
+                            e interação com elementos da página.
+                        </p>
                     </div>
                 </div>
                 <button class="seta seta-dir" onclick="mudarSlide(1)">&#10095;</button>
@@ -175,23 +240,21 @@
         </section>
 
         <section id="contatos">
-            <h2 class="contato-titulo">Entre em Contato</h2>
-            <p class="contato-desc">estou disponível para oportunidades de trabalho e freelancers.</p>
-
-            <h2 class="conversar">Me mande uma mensagem via...</h2>
+            <h2 class="contatos-titulo">Entre em Contato</h2>
+            <p class="contatos-desc">
+                Estou aberto a novas oportunidades na área de Tecnologia da Informação
+                e disponível para conversar sobre oportunidades profissionais.
+            </p>
 
             <div class="icones-contatos">
-                <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=mathiascorrea2006@gmail.com">
-                    <img class="email" src="/details/emaillogo.png" alt="email">
+                <a target="_blank" rel="noopener noreferrer" href="https://mail.google.com/mail/?view=cm&fs=1&to=mathiascorrea2006@gmail.com">
+                    <img class="email" src="details/emaillogo.png" alt="Enviar e-mail">
                 </a>
-                <a target="_blank" href="https://www.linkedin.com/in/mathiascorrêa2006/">
-                    <img class="linkedin" src="/details/linkedinlogo.png" alt="linkedin">
+                <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/mathiascorrêa2006/">
+                    <img class="linkedin" src="details/linkedinlogo.png" alt="Perfil no LinkedIn">
                 </a>
-                <a target="_blank" href="https://www.instagram.com/correahxz/">
-                    <img class="instagram" src="/details/instagramlogo.png" alt="instagram">
-                </a>
-                <a target="_blank" href="https://github.com/MathiasGG">
-                    <img class="github" src="/details/githublogo.png" alt="github">
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/MathiasGG">
+                    <img class="github" src="details/githublogo.png" alt="Perfil no GitHub">
                 </a>
             </div>
 
